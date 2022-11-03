@@ -1,0 +1,16 @@
+<h1>People!</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% if @people.present? %>
+            <%= render @people %>
+        <% else %>
+            <%= render "empty" %>
+        <% end %>
+    </tbody>
+</table>
