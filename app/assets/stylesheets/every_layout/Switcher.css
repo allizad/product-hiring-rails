@@ -1,0 +1,15 @@
+.switcher {
+  display: block;
+}
+
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* Need to figure out why this was necessary */
+  /* overflow: hidden; */
+}
+
+.switcher > * > * {
+  flex-basis: calc((var(--measure) - 100%) * 999);
+  flex-grow: 1;
+}

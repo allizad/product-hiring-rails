@@ -1,16 +1,29 @@
-<h1>People!</h1>
+<div class="center height:100vh">
+  <div class="stack">
+    <div class="cluster">
+      <div>
+        <h1>People</h1>
+      </div>
+    </div>
 
-<table>
-    <thead>
+    <table>
+      <thead>
         <tr>
-            <td>Name</td>
+          <td>Name</td>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         <% if @people.present? %>
-            <%= render @people %>
+          <%= render @people %>
         <% else %>
-            <%= render "empty" %>
+          <%= render "empty" %>
         <% end %>
-    </tbody>
-</table>
+      </tbody>
+    </table>
+
+    <%= link_to 'Go to Comments UI', user_comments_comments_path %>
+    <div></div>
+  </div>
+
+
+</div>
