@@ -67,3 +67,8 @@
 }
 
 .border\:none { border: none }
+
+.on-hover\:color-error:hover { color: var(--color-error) }
+.on-hover\:color-success:hover { color: var(--color-success) }
+.on-hover\:color-info:hover { color: var(--color-info) }
+.on-hover\:color-warning:hover { color: var(--color-warning) }

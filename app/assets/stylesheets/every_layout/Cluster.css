@@ -1,11 +1,19 @@
+.cluster {
+  --space: var(--s1);
+}
+
 .cluster > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
-  margin: calc(var(--s1) / 2 * -1);
+  align-items: center;
+  margin: calc(var(--space) / 2 * -1);
 }
 
 .cluster > * > * {
-  margin: calc(var(--s1) / 2);
+  margin: calc(var(--space) / 2);
+}
+
+.cluster.sm {
+  --space: var(--s-3);
 }

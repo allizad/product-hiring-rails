@@ -77,7 +77,7 @@ button[type="submit"].error {
 }
 
 /* Button Sizes */
-button.sm {
+button.sm , .button.sm {
   font-size: var(--font-size-sm);
   padding: var(--s-3);
 }

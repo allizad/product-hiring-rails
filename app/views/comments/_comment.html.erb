@@ -1,5 +1,20 @@
 <tr>
   <td><%= comment.author.name %></td>
-  <td><%= comment.content %></td>
   <td><%= comment.post.title %></td>
+  <td><%= comment.content %></td>
+  <td>
+    <div class="cluster">
+      <div>
+        <div class="tooltip" data-tooltip="Approve">
+          <i class="fa-solid fa-check on-hover:color-success"></i>
+        </div>
+        <div class="tooltip" data-tooltip="Remove">
+          <i class="fa-duotone fa-trash on-hover:color-error"></i>
+        </div>
+        <div class="tooltip" data-tooltip="Flag">
+          <i class="fa-duotone fa-flag-swallowtail on-hover:color-warning"></i>
+        </div>
+      </div>
+    </div>
+  </td>
 </tr>

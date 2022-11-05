@@ -1,12 +1,20 @@
 <div class="center min-height:100vh">
   <div class="stack">
-    <div></div>
+    <div><%# stack spacer %></div> 
     <div class="cluster">
       <h3>
         <div>Show me all comments from user</div>
         <%= form_for user_comments_comments_url, method: :get do |f| %>
-          <%= select_tag :username, options_from_collection_for_select(Author.all, "name", "name", params[:username]), {include_blank: true, class: 'width:min-content' } %>
-          <%= f.submit 'View' %>
+          <div class="cluster sm">
+            <div>
+              <%=
+                select_tag :username, 
+                  options_from_collection_for_select(Author.all, "name", "name", params[:username]),
+                  { include_blank: true, class: 'width:min-content' }
+              %>
+              <%= f.submit 'View', class: 'button sm' %>
+            </div>
+          </div>
         <% end %>
       </h3>
     </div>
@@ -15,8 +23,9 @@
       <thead>
         <tr>
           <td>Author</td>
-          <td>Content</td>
           <td>Posted on</td>
+          <td>Content</td>
+          <td width="100px"></td>
         </tr>
       </thead>
       <tbody>
@@ -29,10 +38,8 @@
     </table>
     <div >
       <%= link_to 'Go to People UI', root_path %>
-
     </div>
-    <div></div>
-    <div></div>
+    <div><%# stack spacer %></div> 
   </div>
 
 
