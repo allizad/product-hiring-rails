@@ -4,8 +4,14 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+# t.string :title
+#       t.text :content
+#       t.references :author, null: false, foreign_key: true
+one:
+  title: "Fancy Title One"
+  author: one
+
+two:
+  title: "Fancy Title Two"
+  author: two

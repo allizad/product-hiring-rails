@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :comments do
     collection do
-      get 'user_comments'
+      get 'user_comments', as: :user
     end
   end
 end
