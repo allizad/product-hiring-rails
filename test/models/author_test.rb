@@ -1,7 +1,8 @@
 require "test_helper"
 
 class AuthorTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "validity" do
+    author = Author.new
+    assert author.valid?
+  end
 end
