@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_04_145841) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 2022_11_28_232113) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -23,8 +20,8 @@ ActiveRecord::Schema.define(version: 2022_11_04_145841) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
-    t.bigint "post_id", null: false
-    t.bigint "author_id", null: false
+    t.integer "post_id", null: false
+    t.integer "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_comments_on_author_id"
@@ -35,12 +32,13 @@ ActiveRecord::Schema.define(version: 2022_11_04_145841) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "parent_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.bigint "author_id", null: false
+    t.integer "author_id", null: false
     t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
