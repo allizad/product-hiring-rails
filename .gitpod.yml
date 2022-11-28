@@ -19,12 +19,3 @@ tasks:
   - name: Tests
     command: guard start
     openMode: tab-after
-
-vscode:
-  extensions:
-    - rebornix.ruby
-
-jetbrains:
-  rubymine:
-    prebuilds:
-      version: both
