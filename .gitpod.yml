@@ -16,6 +16,3 @@ tasks:
       rake db:create
     command: >
       rails server -b 0.0.0.0
-  - name: Tests
-    command: guard start
-    openMode: tab-after
